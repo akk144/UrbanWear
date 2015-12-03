@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <% include ../layouts/head %>
+  <body>
+    <div class="container">
+      <% include ./common/admin_header %>
+    </div>
+    <div class="container">
+      <div class="col-sm-12">
+        <h1>Add Sku</h1>
+        <form action="/admin/addSku" method="post">
+          <div class="form-group">
+              <label>Name</label>
+              <input type="hidden" name="id" value="<%= sku._id %>">
+              <input type="text" class="form-control" name="name" placeholder="Name"
+              value="<%=sku.name %>">
+              <input type="text" class="form-control" name="dressBy" placeholder="DressBy" value="<%=sku.dressBy %>">
+              <input type="text" class="form-control" name="rental" placeholder="Rental" value="<%=sku.rental %>">
+              <input type="text" class="form-control" name="mrp" placeholder="MRP" value="<%=sku.mrp %>">
+              <input type="text" class="form-control" name="detail" placeholder="Details" value="<%=sku.detail %>">
+              <input type="text" class="form-control" name="stylistNote" placeholder="StylistNote" value="<%=sku.stylistNote %>">
+              <input type="text" class="form-control" name="sizeAndFitNote" placeholder="SizeAndFitNote">
+          </div>
+
+          <div>
+            <h3>Additional</h3>
+            <label for="">Comma separated Urls</label>
+            <input type="text" class="form-control" name="tagList" placeholder="Tag List"
+              value="<%=sku.tagList %>" />
+            <input type="text" class="form-control" name="imgUrlList" placeholder="Image Url List"
+              value="<%=sku.imgUrlList %>" />
+          </div>
+
+          <button type="submit" class="btn btn-warning btn-lg">Save</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

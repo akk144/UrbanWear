@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo</title>
+	<% include ./layouts/head %>
+</head>
+<body>
+	<h1>Profile</h1>
+	<h1><%= JSON.stringify(user) %></h1>
+  <% if(user.role === 'admin') { %>
+    <a href="/admin"> Admin Console </a>
+  <% } %>
+  <a href="/#">Edit Profile</a>
+  <a href="/logout">Logout</a>
+</body>
+</html>

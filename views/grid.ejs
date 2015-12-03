@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <% include ./layouts/head %>
+</head>
+<body ng-app="uberWear" ng-controller="BaseCtrl">
+  <% include ./layouts/top_bar %>
+
+  <div class="container">
+
+
+        <h1>Catalog View : <%= tag%></h1>
+          <div class="col-sm-6">
+            <ul class="catalog-view clr">
+            <% skus.forEach(function(sku){%>
+                <li style="background:url(<%=sku.imageUrls[0]%>) no-repeat bottom / auto 100%;" >
+                    <div class="quick-info">
+                      <a href="/wear/<%=sku._id%>"><h4><%=sku.name%><%=sku.name%></h4></a>
+                      <p class="m5">Description 2 line only to show a bit of info</p>
+                      <b ng-bind="<%=sku.rental%>"></b>
+                    </div>
+
+                  </li>
+
+            <% }); %>
+          </ul>
+          </div>
+
+                      <div class="top-right p20"><input type="button" ng-click="addToCart()" value="Shortlist" class="btn"></div>
+          </div>
+
+
+
+
+      </div>
+
+  <% include ./layouts/include_js %>
+</body>
+</html>

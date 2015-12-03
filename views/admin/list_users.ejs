@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <% include ../layouts/head %>
+  <body>
+    <div class="container">
+      <% include ./common/admin_header %>
+    </div>
+    <div class="container">
+      <div class="col-sm-12">
+        <h1>List of Users</h1>
+        <table class="table table-striped">
+          <tr>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Created</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Bio</th>
+          </tr>
+          <% for(var i=0; i < users.length; i++) {%>
+          <tr>
+            <td><%= users[i].local.email%></td>
+            <td><%= users[i].role%></td>
+            <td><%= users[i].created_at%></td>
+             <td><%= users[i].firstname%></td>
+            <td><%= users[i].lastname%></td>
+            <td><%= users[i].bio%></td>
+          </tr>
+          <% }%>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

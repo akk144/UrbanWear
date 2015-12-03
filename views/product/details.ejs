@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <% include ../layouts/head %>
+  </head>
+  <body ng-app="uberWear" ng-controller="BaseCtrl" ng-init="user_id = '<%= user._id%>'; sku_id = '<%= sku._id%>'; price = '<%= sku.rental%>'">
+    <% include ../layouts/top_bar %>
+    <div class="container" ng-controller="ProductCtrl">
+      <h1><%= sku.name%></h1>
+
+      <div class="col-sm-6 max-50"><img src="<%=sku.imageUrls[0]%>"></div>
+      <div class="col-sm-6">
+        <div class="black-bg row p30">
+          <div class="col-sm-4">
+            <select>
+              <option>Small</option>
+              <option>Media</option>
+              <option>Large</option>
+              <option>Extra Large</option>
+            </select>
+          </div>
+
+          <div class="col-sm-8 white-txt">
+
+            <div class="fw300 f32"><%= sku.rental%><span class="f12">/DAY</span><br><span class="f16">MRP: <%= sku.mrp%>/-</span></div>
+
+          </div>
+        </div>
+          <div align="right" class="row mt20">
+            <a href="/" class="btn btn-default mr15">Continue Shopping</a>
+            <input type="button" ng-click="addToCart()" value="Add to Cart" class="btn btn-primary" />
+          </div>
+      </div>
+
+    </div><!-- /container -->
+    <% include ../layouts/include_js %>
+  </body>
+</html>

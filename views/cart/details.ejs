@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <% include ../layouts/head %>
+  </head>
+  <body ng-app="uberWear" ng-controller="BaseCtrl" >
+
+      <% include ../layouts/top_bar %>
+      <div class="container"  ng-controller="CartCtrl" ng-init="user_id = '<%= user._id%>';">
+
+        <h1>Shopping Cart</h1>
+        <p>Congruatations!  Your are almost there in becoming a celebrity! <br> Just select dates and we'll do the rest!</p>
+        <ul class="checkout-list">
+          <li class="row" ng-repeat="item in items.cart">
+            <div class="col-sm-6">
+              <a href="/wear/{{item.sku._id}}" class="f24">{{item.sku.name}}</a></div>
+            <div class="col-sm-1"><input type="text" ng-model="item.quantity"/></div>
+            <div class="col-sm-2">
+              <input type="text" ng-model="item.fromDate" class="from-datepicker" placeholder="From Date:"/>
+            </div>
+            <div class="col-sm-2">
+              <input type="text" ng-model="item.toDate" class="to-datepicker" placeholder="To Date:"/>
+            </div>
+            <div class="col-sm-1 mt10 f11" align="right"><a href="" ng-click="delete()" class="red">Delete</a></div>
+          </li>
+          </ul>
+          <div align="right" class="m30">
+            <button class="btn btn-primary" type="button" ng-click="confirmOrder()">Checkout</button>
+          </div>
+      </div>
+
+    <% include ../layouts/include_js %>
+  </body>
+</html>

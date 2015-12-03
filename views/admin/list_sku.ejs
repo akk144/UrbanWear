@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <% include ../layouts/head %>
+  <body>
+    <div class="container">
+      <% include ./common/admin_header %>
+    </div>
+    <div class="container">
+      <div class="col-sm-12">
+        <h1>List of Skus</h1>
+        <table class="table table-striped">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>Dress By</th>
+            <th>Action</th>
+          </tr>
+          <% for(var i=0; i < skus.length; i++) {%>
+          <tr>
+            <td><%= skus[i].id%></td>
+            <td><%= skus[i].name%></td>
+            <td><%= skus[i].dressBy%></td>
+            <td>
+              <a href="/admin/editSkus?id=<%=skus[i]._id%>">Edit</a>
+            </td>
+          </tr>
+          <% }%>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

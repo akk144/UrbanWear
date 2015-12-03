@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <% include ../layouts/head %>
+  </head>
+  <body ng-app="uberWear" ng-controller="CartCtrl">
+    <h1>Order Details</h1>
+    <h1>Order details .. <%= JSON.stringify(order) %></h1>
+    <% include ../layouts/include_js %>
+  </body>
+</html>

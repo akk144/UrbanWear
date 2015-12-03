@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %></title>
+	<% include ./layouts/head %>
+</head>
+<body ng-app="uberWear" ng-controller="BaseCtrl">
+  <% include ./layouts/top_bar %>
+
+  <div class="container hero">
+
+    <div id="main-slider" class="owl-carousel owl-theme" style="display: block; opacity: 1;">
+      <% skus.forEach(function(sku){%>
+         <div class="item" style="background:url(<%=sku.imageUrls[0]%>) no-repeat center / auto 100%;">
+            <info>
+             <h2 class="m10"><a href="/wear/<%=sku._id%>"><%=sku.name%></a></h2>
+             <h4 class="m10"><a href="/wear/<%=sku._id%>"><%=sku.dressBy%></a></h4>
+             <p class="fw300"><%=sku.detail%></p>
+             <div class="price-tag fw300 f32"><%=sku.rental%><span class="f12">/DAY</span><br><span class="f16">MRP: <%=sku.mrp%>/-</span></div>
+            </info>
+         </div>
+      <% }); %>
+    </div><!-- /#main-slider -->
+
+  <% include ./layouts/include_js %>
+  <script src="/vendor/owl-carousel.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#main-slider').owlCarousel({
+        navigation: true, // Show next and prev buttons
+        slideSpeed: 700,
+        paginationSpeed: 800,
+        autoPlay: true,
+        singleItem: true,
+        afterInit: ''
+      });
+    })
+  </script>
+</body>
+</html>

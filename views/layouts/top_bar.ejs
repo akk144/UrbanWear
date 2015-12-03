@@ -1,0 +1,113 @@
+<div class="navbar navbar-default yamm" role="navigation" id="navbar" ng-controller="NavCtrl">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand home" href="/" data-animate-hover="bounce" style="opacity: 1;">
+          <img src="../img/logo.png" alt="UberWear logo">
+        </a>
+      </div>
+      <!--/.navbar-header -->
+
+      <div class="navbar-collapse collapse" id="navigation">
+
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown yamm-fw">
+            <a href="/" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">LATEST COLLECTION</a>
+          </li>
+
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">VIEW BY THEME<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="yamm-content">
+                      <ul>
+                        <li><a href="/browse/streetwear">Street Wear</a>
+                        </li>
+                        <li><a href="/browse/bridal">Bridal</a>
+                        </li>
+                        <li><a href="/browse/party">Party Wear</a>
+                        </li>
+                        <li><a href="/browse/traditional">Traditional</a>
+                        </li>
+                      </ul>
+                </div>
+                <!-- /.yamm-content -->
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">VIEW BY TYPE<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="yamm-content">
+                      <ul>
+                        <li><a href="/browse/saris">Saris</a></li>
+                        <li><a href="/browse/dresses">Dresses & Gowns</a></li>
+                        <li><a href="/browse/jumpsuits">Jumpsuits</a></li>
+                        <li><a href="/browse/kurtas">Kurtas and Tunics</a></li>
+                        <li><a href="/browse/lehengas">Lehengas</a></li>
+                        <li><a href="/browse/mix">Mix & Match</a></li>
+                      </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown yamm-fw">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">VIEW BY BRANDS<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="yamm-content">
+                      <ul>
+                        <li><a href="javascript:void(0)">Biba Apparels</a></li>
+                        <li><a href="javascript:void(0)">W FASHIONS</a></li>
+                        <li><a href="javascript:void(0)">Wills</a></li>
+                        <li><a href="javascript:void(0)">fab India</a></li>
+                        <li><a href="javascript:void(0)">Nallis</a></li>
+                        <li><a href="javascript:void(0)">Silks and Saris</a></li>
+                      </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+      <!--/.nav-collapse -->
+
+      <div class="navbar-buttons">
+
+        <div class="navbar-collapse collapse right" id="basket-overview">
+          <a href="/cart" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">{{pg.cart.cart.length}} items in cart</span></a>
+        </div>
+        <!--/.nav-collapse -->
+
+        <div class="navbar-collapse collapse right" id="search-not-mobile">
+          <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
+            <span class="sr-only">Toggle search</span>
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="collapse clearfix" id="search">
+
+        <form class="navbar-form" role="search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-btn">
+
+      <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+
+      </span>
+          </div>
+        </form>
+
+      </div>
+      <!--/.nav-collapse -->
+
+    </div>
+    <!-- /.container -->
+  </div>
