@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
-
 var session = require('express-session');
 var sessions = require('./config/session');
 var RedisStore = require('connect-redis')(session);
